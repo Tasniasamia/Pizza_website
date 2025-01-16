@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 
     <!--=============== FAVICON ===============-->
     <link
@@ -18,15 +17,31 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
     />
 
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="" />
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" />
+  
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css" />
+  
+  
     <title>Responsive pizza website - Bedimcode</title>
 
   </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Responsive Pizza Website</title>
+</head>
   <body>
     <!--==================== HEADER ====================-->
     <!-- <header class="header" id="header">
@@ -100,7 +115,7 @@
             <img src="./assets/img/home-leaf-1.png" alt="Leaf" class="2xl:h-[60px] h-[50px] absolute top-[4rem] 2xl:top-[8rem] first-middle z-20 " />
             <img src="./assets/img/home-tomato.png" alt="Leaf" class="2xl:h-[60px] h-[50px] absolute first-left left-[0rem] top-[8rem] 2xl:top-[16rem] z-20" />
             <img src="./assets/img/home-pepperoni.png" alt="Mushroom" class=" 2xl:h-[60px] h-[50px] first-right top-[8rem] 2xl:top-[16rem] right-[1rem] absolute z-20" />
-            <img src="./assets/img/home-olive.png" alt="Leaf" class="2xl:h-[60px] h-[50px] absolute middle bottom-[0rem] z-20 " />
+            <img src="./assets/img/home-olive.png" alt="Leaf" class="2xl:h-[60px] h-[50px] absolute middle bottom-[-0.1rem] z-20 " />
             <img src="./assets/img/home-leaf-2.png" alt="Leaf" class="2xl:h-[60px] h-[50px] absolute left-[1rem] bottom-[3rem] 2xl:bottom-[8rem] z-20" />
             <img src="./assets/img/home-mushroom.png" alt="Mushroom" class=" 2xl:h-[60px] h-[50px] 2xl:bottom-[8rem] bottom-[3rem] right-[1rem] absolute z-20" />
 
@@ -113,7 +128,46 @@
       <section class="about section" id="about"></section>
 
       <!--==================== POPULAR ====================-->
-      <section class="popular section" id="popular"></section>
+      <section class=" section " id="popular">
+      <div class="popular-container container_custom">
+      <div class="popular-swiper swiper">
+        <img src="./assets/img/popular-dish.png" alt="popular image" class="popular_dish" />
+
+      <div class="swiper-wrapper">
+         <article class="popular__card swiper-slide">
+          <img src="./assets/img/product-1.png" alt="popular image" class="popular__img" />
+          <div class="popular__data">
+            <h3 class="popular__name">Pepperoni Pizza</h3>
+            </div>
+          </article>
+          <article class="popular__card swiper-slide">
+            <img src="./assets/img/product-2.png" alt="popular image" class="popular__img" />
+            <div class="popular__data">
+              <h3 class="popular__name">Pepperoni Pizza</h3>
+              </div>
+            </article>
+            <article class="popular__card swiper-slide">
+              <img src="./assets/img/product-3.png" alt="popular image" class="popular__img" />
+              <div class="popular__data">
+                <h3 class="popular__name">Pepperoni Pizza</h3>
+                </div>
+              </article>
+              <article class="popular__card swiper-slide">
+                <img src="./assets/img/product-4.png" alt="popular image" class="popular__img" />
+                <div class="popular__data">
+                  <h3 class="popular__name">Pepperoni Pizza</h3>
+                  </div>
+                </article>
+                <article class="popular__card swiper-slide">
+                  <img src="./assets/img/product-5.png" alt="popular image" class="popular__img" />
+                  <div class="popular__data">
+                    <h3 class="popular__name">Pepperoni Pizza</h3>
+                    </div>
+                  </article>
+      </div>
+      </div>
+    </div>
+      </section>
 
       <!--==================== RECIPE ====================-->
       <section class="recipe section"></section>
@@ -131,12 +185,22 @@
     <!--========== SCROLL UP ==========-->
 
     <!--=============== SCROLLREVEAL ===============-->
-    <script src=""></script>
+    <!-- <script src=""></script> -->
 
     <!--=============== SWIPER JS ===============-->
-    <script src=""></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.popular-swiper', {
+            loop: true,
+            grabCursor: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+
+        });
+    </script>
+
+ 
   </body>
 </html>
