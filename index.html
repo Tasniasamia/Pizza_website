@@ -44,34 +44,31 @@
 </head>
   <body>
     <!--==================== HEADER ====================-->
-    <!-- <header class="header" id="header">
-      <div class="container_custom block w-full">
-        <nav class="header__nav">
-          <a href="#" class="nav__logo flex gap-2 items-center">
-            <img src="assets/img/logo-pizza.svg" alt="logo" class="w-[40px]" />
-            <h1>Pizza</h1>
+    <header class="header" id="header">
+        <nav class="nav container_custom">
+          <a href="#" class="nav__logo">
+            <img src="assets/img/logo-pizza.svg" alt="logo"/>
+            Pizza
           </a>
-          <ul class="flex justify-center items-center gap-16">
-            <li><a href="#" class="nav__link">Home</a></li>
-            <li><a href="#about" class="nav__link">About Us</a></li>
-            <li><a href="#popular" class="nav__link">Popular </a></li>
-            <li><a href="#product" class="nav__link">Product</a></li>
-            <li><a href="#contact" class="nav__link">Contact</a></li>
-          </ul>
-          close & toggle-icon
-          <div>
-            <div class="close-icon"><i class="ri-close-line"></i></div>
-            <div class="toggle-icon"><i class="ri-dashboard-fill"></i></div>
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li><a href="#home" class="nav__link">Home</a></li>
+              <li><a href="#about" class="nav__link">About Us</a></li>
+              <li><a href="#popular" class="nav__link">Popular </a></li>
+              <li><a href="#product" class="nav__link">Product</a></li>
+              <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <div class="close__btn"id="close-btn"><i class="ri-close-line"></i></div>
           </div>
+          <div class="toggle-btn"id="nav-toggle"><i class="ri-dashboard-fill"></i></div>
         </nav>
-      </div>
-    </header> -->
+    </header>
 
     <!--==================== MAIN ====================-->
     <!-- <main class="main"> -->
       <!--==================== HOME ====================-->
-      <section class="home section container_custom flex md:flex-row gap-[60px] flex-col p-4 items-center " id="home">
-        <div class=" md:w-1/2 w-full bg-yellow-300 h-full ">
+      <section class="mt-[150px] home section container_custom flex md:flex-row gap-[60px] flex-col p-4 items-center " id="home">
+        <div class=" md:w-1/2 w-full  h-full ">
          <div class="relative ">
           <h1 class="home__title sm::text-5xl text-3xl leading-[122%]">
             Crispy And <br />
@@ -98,8 +95,8 @@
           />
          </div>
         </div>
-        <div class="md:w-1/2 w-full bg-red-300   h-full flex justify-center items-center">
-        <div class="relative xl:w-fit sm:w-[300px]   h-fit grid place-items-center justify-center bg-green-300">
+        <div class="md:w-1/2 w-full    h-full flex justify-center items-center">
+        <div class="relative xl:w-fit sm:w-[300px]   h-fit grid place-items-center justify-center ">
            
           <img
             src="./assets/img/home-board.png"
@@ -128,7 +125,7 @@
       <section class="about section" id="about"></section>
 
       <!--==================== POPULAR ====================-->
-      <section class=" section " id="popular">
+      <section class=" overflow-hidden section  " id="popular">
       <div class="popular-container container_custom">
       <div class="popular-swiper swiper">
         <img src="./assets/img/popular-dish.png" alt="popular image" class="popular_dish" />
@@ -189,17 +186,20 @@
 
     <!--=============== SWIPER JS ===============-->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-
+    <script src="./assets/js/main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.popular-swiper', {
-            loop: true,
-            grabCursor: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-
-        });
-    </script>
+      const swiper = new Swiper('.popular-swiper', {
+          loop: true,
+          grabCursor: true,
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          spaceBetween: 30, // Space between slides
+  
+          // Responsive breakpoints
+         
+      });
+  </script>
 
  
   </body>
