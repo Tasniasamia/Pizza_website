@@ -52,7 +52,7 @@
           </a>
           <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
-              <li><a href="#home" class="nav__link">Home</a></li>
+              <li><a href="#home" class="nav__link ">Home</a></li>
               <li><a href="#about" class="nav__link">About Us</a></li>
               <li><a href="#popular" class="nav__link">Popular </a></li>
               <li><a href="#product" class="nav__link">Product</a></li>
@@ -67,21 +67,21 @@
     <!--==================== MAIN ====================-->
     <!-- <main class="main"> -->
       <!--==================== HOME ====================-->
-      <section class="hero section   " id="hero">
+      <section class="hero section" id="home">
         <div class="hero_container herull flex container_custom md:flex-row  flex-col  items-center">
-        <div class=" md:w-1/2 w-full  h-full ">
+        <div class=" md:w-1/2 w-full  md:h-full ">
          <div class="relative ">
           <h1 class="home__title sm::text-5xl text-3xl leading-[122%]">
             Crispy And <br />
             Delicious Pizzas
           </h1>
-          <p class="home__description sm:w-[400px] w-full mt-2 !pb-[50px]">
+          <p class="home__description sm:w-[400px] w-full mt-2 ">
             Order the best pizzas to end your hunger and make your family
             moments more memorable, place your order now.
           </p>
           <a
             href="#"
-            class="button rounded-full px-[24px] py-[12px] bg-red-600 rounded hover:scale-[1.5] cursor-pointer text-white"
+            class="button "
             >Order Pizza Now</a
           >
           <img
@@ -96,7 +96,7 @@
           />
          </div>
         </div>
-        <div class="md:w-1/2 w-full    h-full flex justify-center items-center">
+        <div class="md:w-1/2 w-full    md:h-full flex justify-center items-center">
         <div class="relative xl:w-fit sm:w-[300px] mx-auto  h-fit grid place-items-center justify-center ">
            
           <img
@@ -123,7 +123,22 @@
       </section>
 
       <!--==================== ABOUT ====================-->
-      <section class="about section" id="about"></section>
+      <section class="about section" id="about">
+        <div class="about_container container_custom grid grid-cols-1 md:grid-cols-2 md:order-2 order-1">
+        <div class="about-data h-fit w-fit">
+          <h2 class="section__title ">Learn More About <br/> Our History</h2>
+          <p class="about__description">
+            We are a family owned Mediterranean restaurant, focused on
+            traditional recipes served with a modern twist.
+          </p>
+          <a href="#" class="button">Learn More</a>
+          <img  src="./assets/img/sticker-cheese.svg"
+          alt="cheese" class="about_svg" />
+        </div>
+
+        <img src="./assets/img/about-img.png" alt="about" class="about_img md:order-1 order-2" />
+        </div>
+      </section>
 
       <!--==================== POPULAR ====================-->
       <section class=" overflow-hidden section  " id="popular">
@@ -171,7 +186,7 @@
       <section class="recipe section"></section>
 
       <!--==================== PRODUCTS ====================-->
-      <section class="products section" id="products"></section>
+      <section class="products section" id="product"></section>
 
       <!--==================== CONTACT ====================-->
       <section class="contact section" id="contact"></section>
@@ -193,6 +208,8 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <script src="./assets/js/main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <script>
       const swiper = new Swiper('.popular-swiper', {
           loop: true,
@@ -204,6 +221,13 @@
           // Responsive breakpoints
          
       });
+      const sr = ScrollReveal({
+    distance: '50px',   // How far the element moves
+    duration: 1000,     // Animation duration in milliseconds
+    easing: 'ease-in-out', // Animation easing function
+    reset: true         // Whether the animation resets on scroll
+  });
+  sr.reveal('.hero__data', { delay: 500, origin: 'top' });
   </script>
 
  
